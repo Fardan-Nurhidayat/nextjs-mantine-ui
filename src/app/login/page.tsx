@@ -1,13 +1,15 @@
 import {
   Center,
-  Box,
   TextInput,
   PasswordInput,
   Button,
   Paper,
   Stack,
   Title,
+  Text,
+  Anchor,
 } from "@mantine/core";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -47,6 +49,18 @@ export default function Login() {
             color='dark'>
             Login
           </Button>
+          <Text
+            ta='center'
+            size='sm'
+            mt='md'>
+            Don't have an account?{" "}
+            <Anchor
+              component={Link}
+              href='/register'
+              c='dark'>
+              Register here
+            </Anchor>
+          </Text>
         </Stack>
       </Paper>
     </Center>
